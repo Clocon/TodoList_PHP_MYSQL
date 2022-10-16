@@ -1,0 +1,13 @@
+{
+    "name": "luis/todo-list",
+    "description": "Proyecto Listado de Tareas",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis",
+            "email": "luiste49@gmail.com"
+        }
+    ],
+    "require": {}
+}
