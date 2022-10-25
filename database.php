@@ -67,16 +67,7 @@ function deleteTarea($id, $conect){
 
 function consultTarea($conect){
   $sql = 'SELECT * FROM tareas ORDER BY ID';
-  foreach ($conect->query($sql) as $row) {
-    echo "<tr>";
-    echo '<td>'.$row['ID'].'</td>';
-    echo '<td>'.$row['Título'].'</td>';
-    echo '<td>'.$row['Categoría'].'</td>';
-    echo '<td>'.$row['Descripción'].'</td>';
-    echo '<td>'.$row['Fecha_Creación'].'</td>';
-    echo '<td>'.$row['Fecha_Actualización'].'</td>';
-    echo "</tr>";    
-  }
+  return $conect->query($sql)->fetchAll();
 }
 
 function IDSelector($conect){

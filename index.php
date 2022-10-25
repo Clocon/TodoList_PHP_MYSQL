@@ -5,7 +5,9 @@ $request = $_SERVER['REQUEST_METHOD'];
 switch ($request) {
   case '':
   case 'GET':
-    consultTarea($conect);
+    $listado=consultTarea($conect);
+    header("Content-Type: aplication/json; charset=utf-8");
+    echo json_encode($listado);
     break;
   case 'POST':
     $json = file_get_contents('php://input');
